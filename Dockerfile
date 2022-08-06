@@ -16,7 +16,8 @@ RUN git clone --recursive https://github.com/ClickHouse/ClickHouse.git \
 # RUN bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 # RUN wget https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
 # RUN tar -xvf clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
-# RUN mkdir -p ClickHouse/build && cd ClickHouse/build \
-#  &&  cmake .. -DCMAKE_CXX_COMPILER=/clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++  -DCMAKE_C_COMPILER=/clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang \
-#  && ninja
+
+RUN mkdir -p ClickHouse/build && cd ClickHouse/build \
+ && cmake .. -DCMAKE_CXX_COMPILER=/usr/bin/g++-11 -DCMAKE_C_COMPILER=/usr/bin/gcc-11 \
+ && ninja
 
