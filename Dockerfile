@@ -19,5 +19,5 @@ RUN wget https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/c
 RUN tar -xvf clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
 RUN mkdir -p ClickHouse/build && cd ClickHouse/build \
   &&  cmake .. -DCMAKE_CXX_COMPILER=/clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++  -DCMAKE_C_COMPILER=/clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang \
-  && ninja
+#  && ninja
 
