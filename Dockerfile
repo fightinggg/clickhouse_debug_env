@@ -4,13 +4,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install git pbuilder debhelper lsb-re
 RUN apt-get install git cmake ninja-build -y
 RUN apt-get install wget -y
 
-# GCC
+# GCC/Clang
 RUN apt-get install --reinstall ca-certificates -y
 RUN apt-get install software-properties-common -y
 RUN add-apt-repository --update ppa:ubuntu-toolchain-r/test
 RUN bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 RUN apt-get install ccache -y
-
+RUN apt-get install gcc-11 g++-11 -y
 
 # clickhouse src
 RUN git clone --recursive https://github.com/ClickHouse/ClickHouse.git
