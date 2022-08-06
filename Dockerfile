@@ -7,6 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install git cmake ninja-build wget cc
 
 # clickhouse src
 RUN git clone --recursive https://github.com/ClickHouse/ClickHouse.git \
+ && cd Clickhouse \
  && ls -F contrib | sed  "s/$/.git/g" | sed "s/^/contrib\//g" | xargs rm -rf \
  && rm -rf .git
 
