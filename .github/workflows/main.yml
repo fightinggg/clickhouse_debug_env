@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - '**'
-      - 'clickhouse-*.*.*'
     tags:
       - 'v*.*.*'
   pull_request:
@@ -15,10 +14,10 @@ on:
       - 'master'
 
 env:
-  app: fightinggg/clickhouse_debug_compiler
+  app: fightinggg/clickhouse_debug_env
   dockerhub_username: fightinggg
   dockerhub_password: ${{ secrets.DOCKERHUB_PASSWORD }}
-  short_description: '😊 https://github.com/fightinggg/clickhouse_debug_compiler'
+  short_description: '😊 https://github.com/fightinggg/clickhouse_debug_env'
   readme_file: 'README.md'
   Dockerfile: 'Dockerfile'
 
