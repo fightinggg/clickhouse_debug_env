@@ -8,7 +8,7 @@ RUN apt-get install lsof vim rsync -y
 
 
 # Clang
-RUN DEBIAN_FRONTEND=noninteractive apt-get install git cmake ninja-build wget ccache -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get install git cmake ninja-build wget ccache llvm -y
 RUN bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 
 # SSH
