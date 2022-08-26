@@ -4,6 +4,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install git pbuilder debhelper lsb-re
 RUN apt-get install --reinstall ca-certificates -y
 RUN apt-get install software-properties-common -y
 RUN add-apt-repository --update ppa:ubuntu-toolchain-r/test
+RUN apt-get install lsof -y # for clion need lsof
 
 # Clang
 RUN DEBIAN_FRONTEND=noninteractive apt-get install git cmake ninja-build wget ccache -y
