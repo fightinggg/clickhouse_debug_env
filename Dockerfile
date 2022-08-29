@@ -21,6 +21,9 @@ mkdir /run/sshd
 
 RUN echo root:123456 | chpasswd
 
+# Key
+RUN echo -e "bind -x '\"\C-l\": clear;'" > /root/.bashrc
+
 # clickhouse src
 # RUN git clone --recursive https://github.com/ClickHouse/ClickHouse.git
 
