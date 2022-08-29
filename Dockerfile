@@ -22,6 +22,7 @@ mkdir /run/sshd
 RUN echo root:123456 | chpasswd
 
 # Key
+## https://xiaoyu.blog.csdn.net/article/details/123840123?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-123840123-blog-51498724.pc_relevant_multi_platform_whitelistv4&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-123840123-blog-51498724.pc_relevant_multi_platform_whitelistv4&utm_relevant_index=1
 RUN echo -e "bind -x '\"\C-l\": clear;'" > /root/.bashrc
 
 # clickhouse src
